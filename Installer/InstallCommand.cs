@@ -341,7 +341,7 @@ internal sealed class InstallCommand : AsyncCommand<InstallCommand.Settings>
 					};
 
 					using var client = new HttpClient(handler);
-					var buffer = await client.GetByteArrayAsync(new Uri($"https://github.com/sailro/EscapeFromTarkov-Trainer/archive/refs/heads/{branch}.zip"));
+					var buffer = await client.GetByteArrayAsync(new Uri($"https://github.com/Inersuu/EscapeFromTushonka-Trainer/archive/refs/heads/{branch}.zip"));
 					var stream = new MemoryStream(buffer);
 					result = new ZipArchive(stream, ZipArchiveMode.Read);
 				});
