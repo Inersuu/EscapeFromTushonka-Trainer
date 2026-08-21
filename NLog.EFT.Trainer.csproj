@@ -54,51 +54,57 @@
     </Reference>
     <!-- Game assemblies -->
     <Reference Include="Assembly-CSharp">
-      <HintPath>$(EFTManagedPath)\Assembly-CSharp.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="bsg.console.core">
-      <HintPath>$(EFTManagedPath)\bsg.console.core.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\bsg.console.core.dll</HintPath>
     </Reference>
     <Reference Include="Comfort">
-      <HintPath>$(EFTManagedPath)\Comfort.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\Comfort.dll</HintPath>
     </Reference>
     <Reference Include="Comfort.Unity">
-      <HintPath>$(EFTManagedPath)\Comfort.Unity.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\Comfort.Unity.dll</HintPath>
     </Reference>
     <Reference Include="ItemComponent.Types">
-      <HintPath>$(EFTManagedPath)\ItemComponent.Types.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\ItemComponent.Types.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>$(EFTManagedPath)\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="ItemTemplate.Types">
-      <HintPath>$(EFTManagedPath)\ItemTemplate.Types.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\ItemTemplate.Types.dll</HintPath>
     </Reference>
     <Reference Include="DissonanceVoip">
-      <HintPath>$(EFTManagedPath)\DissonanceVoip.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\DissonanceVoip.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>$(EFTManagedPath)\Sirenix.Serialization.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="CommonExtensions">
-      <HintPath>$(EFTManagedPath)\CommonExtensions.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\CommonExtensions.dll</HintPath>
     </Reference>
     <!-- Unity -->
+    <Reference Include="UnityEngine">
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>$(EFTManagedPath)\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>$(EFTManagedPath)\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>$(EFTManagedPath)\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(EFTManagedPath)\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>$(EFTManagedPath)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <!-- Optional -->
     <Reference Include="0Harmony">
@@ -106,11 +112,6 @@
     </Reference>
   </ItemGroup>
   <!-- Only to work with legacy installer regex parsing -->
-  <ItemGroup Condition="Exists('$(EFTManagedPath)\UnityEngine.InputLegacyModule.dll')">
-    <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>$(EFTManagedPath)\UnityEngine.InputLegacyModule.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ColorConverter.cs" />
     <Compile Include="Configuration\ConfigurationManager.cs" />

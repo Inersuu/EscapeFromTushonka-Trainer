@@ -72,7 +72,7 @@ internal class LootableContainers : PointOfInterests
 				AddRecord(rootItem.TemplateId.LocalizedShortName(), owner.Value.Transform.position, data);
 
 			if (ShowCorpses && rootItem.TemplateId == KnownTemplateIds.DefaultInventory
-							&& itemOwner is TraderControllerClass { Name: nameof(Corpse) }) // only display dead bodies
+							&& itemOwner is EFT.InventoryLogic.ItemController { Name: nameof(Corpse) }) // only display dead bodies
 				AddRecord(nameof(Corpse), owner.Value.Transform.position, data);
 		}
 	}

@@ -144,7 +144,7 @@ internal class Installation
 				return false;
 
 			// Starting with 4.0.0, folder layout changed
-			installation.UsingSpt = Directory.Exists(Path.Combine(path, "SPT_Data")) || Directory.Exists(Path.Combine(path, "SPT", "SPT_Data"));
+			installation.UsingSpt = Directory.Exists(Path.Combine(path, "SPT_Data")) || Directory.Exists(Path.Combine(path, "SPT_Runtime", "SPT_Data"));
 
 
 			var battleye = Path.Combine(path, "BattlEye");
