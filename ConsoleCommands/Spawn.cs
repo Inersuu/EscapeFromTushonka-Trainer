@@ -65,10 +65,10 @@ internal class Spawn : BaseTemplateCommand
 
 	private static void SpawnTemplate(ItemTemplate template, Player player, ConsoleCommand command)
 	{
-		var poolManager = Singleton<PoolManagerClass>.Instance;
+		var poolManager = Singleton<EFT.ObjectsFactory>.Instance;
 
 		poolManager
-			.LoadBundlesAndCreatePools(PoolManagerClass.PoolsCategory.Raid, PoolManagerClass.AssemblyType.Online, [.. template.AllResources], JobPriorityClass.Immediate)
+			.LoadBundlesAndCreatePools(EFT.ObjectsFactory.PoolsCategory.Raid, EFT.ObjectsFactory.AssemblyType.Online, [.. template.AllResources], Diz.Jobs.JobYieldPriority.Immediate)
 			.ContinueWith(task =>
 			{
 				AsyncWorker.RunInMainTread(delegate
@@ -79,7 +79,7 @@ internal class Spawn : BaseTemplateCommand
 					}
 					else
 					{
-						var itemFactory = Singleton<ItemFactoryClass>.Instance;
+						var itemFactory = Singleton<EFT.ItemFactory>.Instance;
 						var item = itemFactory.CreateItem(MongoID.Generate(), template._id, null);
 						if (item == null)
 						{
@@ -87,7 +87,7 @@ internal class Spawn : BaseTemplateCommand
 						}
 						else
 						{
-							_ = new TraderControllerClass(item, item.Id, item.ShortName);
+							_ = new EFT.InventoryLogic.ItemController(item, item.Id, item.ShortName);
 							var go = poolManager.CreateLootPrefab(item, ECameraType.Default);
 
 							go.SetActive(value: true);
@@ -112,7 +112,7 @@ internal class Spawn : BaseTemplateCommand
 			});
 	}
 
-	private static void SetupItem(ItemFactoryClass itemFactory, Item item)
+	private static void SetupItem(EFT.ItemFactory itemFactory, Item item)
 	{
 		item.SpawnedInSession = true; // found in raid
 
@@ -147,7 +147,7 @@ internal class Spawn : BaseTemplateCommand
 			FillStackSlot(itemFactory, container.Cartridges);
 	}
 
-	private static void FillSlots(ItemFactoryClass itemFactory, IEnumerable<Slot> slots)
+	private static void FillSlots(EFT.ItemFactory itemFactory, IEnumerable<Slot> slots)
 	{
 		foreach (var slot in slots)
 		{
@@ -168,7 +168,7 @@ internal class Spawn : BaseTemplateCommand
 		}
 	}
 
-	private static void FillStackSlot(ItemFactoryClass itemFactory, StackSlot slot)
+	private static void FillStackSlot(EFT.ItemFactory itemFactory, StackSlot slot)
 	{
 		var filter = slot
 			.Filters.FirstOrDefault()?

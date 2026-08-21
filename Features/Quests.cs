@@ -35,7 +35,7 @@ internal class Quests : PointOfInterests
 
 #pragma warning disable IDE0060
 	[UsedImplicitly]
-	protected static void OnConditionChangedHandlerPostfix(QuestClass conditional)
+	protected static void OnConditionChangedHandlerPostfix(EFT.Quests.Quest conditional)
 	{
 		_refreshLookupTables = true;
 	}
@@ -197,7 +197,7 @@ internal class Quests : PointOfInterests
 	{
 		HarmonyPatchOnce(harmony =>
 		{
-			HarmonyPostfix(harmony, typeof(AbstractQuestControllerClass), nameof(AbstractQuestControllerClass.OnConditionChangedHandler), nameof(OnConditionChangedHandlerPostfix));
+			HarmonyPostfix(harmony, typeof(EFT.Quests.QuestController), nameof(EFT.Quests.QuestController.OnConditionChangedHandler), nameof(OnConditionChangedHandlerPostfix));
 		});
 	}
 }

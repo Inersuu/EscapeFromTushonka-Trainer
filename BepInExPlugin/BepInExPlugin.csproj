@@ -45,14 +45,14 @@
     </Reference>
     <!-- Unity -->
     <Reference Include="UnityEngine">
-      <HintPath>$(EFTManagedPath)\UnityEngine.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>$(EFTManagedPath)\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <!-- BepInEx -->
     <Reference Include="BepInEx">
-      <HintPath>$(EFTBepInExCorePath)\BepInEx.dll</HintPath>
+      <HintPath>F:\Games\SPTFika\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
