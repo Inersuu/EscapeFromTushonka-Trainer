@@ -1,5 +1,5 @@
 
-# EscapeFromTarkov-Trainer
+# EscapeFromTushonka-Trainer
 
 [![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-lightgrey?logo=github&style=flat-square)](https://github.com/sponsors/sailro)
 
